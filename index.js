@@ -6,10 +6,14 @@ const dotenv = require('dotenv')
 const app = express();
 dotenv.config();
 
-// replace the value below with the Telegram token you receive from @BotFather
 const token = process.env.TELEGRAM_BOT_TOKEN;
 
-// Create a bot that uses 'polling' to fetch new updates
+const configuration = new Configuration({
+  apiKey: process.env.OPENAI_API_KEY,
+})
+
+const openai = new OpenAIApi(configuration)
+
 const bot = new TelegramBot(token, {polling: true});
 
 
@@ -22,4 +26,11 @@ bot.on('message', (msg) => {
 
   bot.sendMessage(chatId, 'Received your message');
 });
+
+
+
+const PORT = process.env.PORT || 5000;
+
+
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
