@@ -1,5 +1,9 @@
+const express = require('express')
 const TelegramBot = require('node-telegram-bot-api');
+const {Configuration, OpenAIApi} = require('openai')
 const dotenv = require('dotenv')
+
+const app = express();
 dotenv.config();
 
 // replace the value below with the Telegram token you receive from @BotFather
