@@ -16,8 +16,9 @@ const openai = new OpenAIApi(configuration)
 
 const bot = new TelegramBot(token, {polling: true});
 
+bot.on("polling_error", (msg) => console.log(msg));
 
-// Listen for any kind of message. There are different kinds of messages.
+// Listen for any message received
 bot.on('message', async (msg) => {
   const chatId = msg.chat.id;
   const msgContent = msg.text
@@ -33,9 +34,8 @@ bot.on('message', async (msg) => {
   })
   
   bot.sendMessage(chatId, response.data.choices[0].text);
-
-  bot.sendMessage(chatId, 'Received your message');
 });
+
 
 
 
@@ -43,4 +43,3 @@ const PORT = process.env.PORT || 5000;
 
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
