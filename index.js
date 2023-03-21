@@ -9,3 +9,13 @@ const token = process.env.TELEGRAM_BOT_TOKEN;
 const bot = new TelegramBot(token, {polling: true});
 
 
+// Listen for any kind of message. There are different kinds of messages.
+bot.on('message', (msg) => {
+  const chatId = msg.chat.id;
+  const msgContent = msg.text
+
+  //TODO add middleware
+
+  bot.sendMessage(chatId, 'Received your message');
+});
+
