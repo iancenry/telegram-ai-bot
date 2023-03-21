@@ -8,7 +8,7 @@ This is the server side code of a teleegram bot that utilizes openai's chatgpt t
 1. Happy coding 💻
 **NB** Add your own telegram token and openai api key.
 
-* Dependencies used: ``dotenv``, ``express``, ``node-telegram-bot-api`, `openai`
+* Dependencies used: ``dotenv``, ``express``, ``node-telegram-bot-api`, ``openai``
 
 [Bot Link](t.me/exurbiaBot)  -  Working bot upon request due to openai API limit.
 [Reference documentation](https://core.telegram.org/bots)
