@@ -1,6 +1,7 @@
 # Artificial Intelligence Telegram Bot
 This is the server side code of a teleegram bot that utilizes openai's chatgpt to reply to telegram messages.
 
+
 ![Screenshot_20230321-234327_Telegram](https://user-images.githubusercontent.com/77986239/226741297-2d4929d7-7cf4-4582-baae-5cb143fd4192.jpg)
 
 ## Quick Setup
